@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    /*Aliases*/
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "target": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Container, Grid } from '@chakra-ui/react';
-import { Footer, Header } from '..';
+import { Footer, Header } from '@/components';
 
 export const Layout: FC = () => {
   return (

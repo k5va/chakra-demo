@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Container, Link, List, ListItem } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
-import { Logo } from '..';
+import { Logo, SiteNav } from '@/components';
 
 export const Header: FC = () => {
   return (
@@ -18,7 +18,7 @@ export const Header: FC = () => {
               </Link>
             </ListItem>
             <ListItem>
-              <Link></Link>
+              <SiteNav />
             </ListItem>
           </List>
         </nav>

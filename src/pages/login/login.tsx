@@ -1,6 +1,6 @@
 import { Box, Heading, SimpleGrid } from '@chakra-ui/react';
 import { FC } from 'react';
-import { LoginForm } from '../../components';
+import { LoginForm } from '@/components';
 
 export const Login: FC = () => {
   return (

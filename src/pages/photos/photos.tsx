@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { usePhotos } from '../../hooks';
 import { SimpleGrid, Spinner } from '@chakra-ui/react';
-import { Photo } from '../../components';
+import { usePhotos } from '@/hooks';
+import { Photo } from '@/components';
 
 export const Photos: FC = () => {
   const { data: photos, isLoading } = usePhotos();
