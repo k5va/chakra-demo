@@ -12,6 +12,7 @@ export const Layout: FC = () => {
         maxW={'container.lg'}
         display={'flex'}
         flexDirection={'column'}
+        py={'1rem'}
       >
         <Outlet />
       </Container>

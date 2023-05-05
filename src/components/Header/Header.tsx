@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Container, Link, List, ListItem } from '@chakra-ui/react';
+import { Link as RouterLink } from 'react-router-dom';
 import { Logo } from '..';
 
 export const Header: FC = () => {
@@ -12,7 +13,7 @@ export const Header: FC = () => {
               transitionDuration="0.3s"
               _hover={{ transform: 'scale(1.2)' }}
             >
-              <Link>
+              <Link as={RouterLink} to={'/login'}>
                 <Logo />
               </Link>
             </ListItem>

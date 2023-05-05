@@ -1,13 +1,13 @@
 import { FC } from 'react';
 import { usePhotos } from '../../hooks';
-import { SimpleGrid, Text } from '@chakra-ui/react';
+import { SimpleGrid, Spinner } from '@chakra-ui/react';
 import { Photo } from '../../components';
 
 export const Photos: FC = () => {
   const { data: photos, isLoading } = usePhotos();
 
   if (isLoading) {
-    return <Text>Loading...</Text>;
+    return <Spinner mx={'auto'} />;
   }
 
   return (

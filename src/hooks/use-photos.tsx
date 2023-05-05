@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react';
 import ky from 'ky';
 import { Photo } from '../type';
 import { photoSchema } from '../schema';
+import { useToastError } from '.';
 
 export const usePhotos = () => {
   const [photos, setPhotos] = useState<Photo[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
+  const { toast } = useToastError();
 
   useEffect(() => {
     const fetchPhotos = async () => {
@@ -20,15 +22,18 @@ export const usePhotos = () => {
 
         setPhotos(await photoSchema.array().parseAsync(json));
       } catch (error) {
-        //TODO: process error
-        console.log(error);
+        if (error instanceof Error) {
+          setError(error.message);
+          toast(error.message);
+        }
+        console.error(error);
       }
 
       setLoading(false);
     };
 
     fetchPhotos();
-  }, []);
+  }, [toast]);
 
   return { data: photos, isLoading: loading, error };
 };

@@ -1,1 +1,2 @@
-export * from './usePhotos';
+export * from './use-photos';
+export * from './use-toast-error';
