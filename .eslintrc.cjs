@@ -4,6 +4,8 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
@@ -11,4 +13,4 @@ module.exports = {
   rules: {
     'react-refresh/only-export-components': 'warn',
   },
-}
+};
