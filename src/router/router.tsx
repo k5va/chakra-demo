@@ -1,6 +1,6 @@
 import { RouteObject } from 'react-router-dom';
-import { Photos, Login } from '../pages';
-import { Layout } from '../components';
+import { Photos, Login } from '@/pages';
+import { Layout } from '@/components';
 
 export const routes: RouteObject[] = [
   {

@@ -1,6 +1,6 @@
 import { Box, Card, CardBody, Image, Text } from '@chakra-ui/react';
 import { FC } from 'react';
-import { Photo as PhotoType } from '../../type';
+import { Photo as PhotoType } from '@/type';
 
 type PhotoProps = {
   photo: PhotoType;

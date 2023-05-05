@@ -3,7 +3,7 @@ import { Button, Flex } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { FormInput } from '..';
+import { FormInput } from '@/components';
 
 const MIN_PASSWORD_LENGTH = 8;
 

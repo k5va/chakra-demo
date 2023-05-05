@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import ky from 'ky';
-import { Photo } from '../type';
-import { photoSchema } from '../schema';
-import { useToastError } from '.';
+import { Photo } from '@/type';
+import { photoSchema } from '@/schema';
+import { useToastError } from '@/hooks';
 
 export const usePhotos = () => {
   const [photos, setPhotos] = useState<Photo[]>([]);
