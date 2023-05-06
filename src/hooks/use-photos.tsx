@@ -4,7 +4,12 @@ import { Photo } from '@/type';
 import { photoSchema } from '@/schema';
 import { useToastError } from '@/hooks';
 
-export const usePhotos = () => {
+type UsePhotosProps = {
+  page: number;
+  limit: number;
+};
+
+export const usePhotos = ({ page, limit }: UsePhotosProps) => {
   const [photos, setPhotos] = useState<Photo[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
@@ -17,7 +22,9 @@ export const usePhotos = () => {
 
       try {
         const json = await ky
-          .get('https://jsonplaceholder.typicode.com/photos?_limit=100')
+          .get(
+            `https://jsonplaceholder.typicode.com/photos?_page=${page}&_limit=${limit}`
+          )
           .json();
 
         setPhotos(await photoSchema.array().parseAsync(json));
@@ -33,7 +40,7 @@ export const usePhotos = () => {
     };
 
     fetchPhotos();
-  }, [toast]);
+  }, [toast, page, limit]);
 
   return { data: photos, isLoading: loading, error };
 };
