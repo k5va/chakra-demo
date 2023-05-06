@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://k5va.github.io/chakra-demo/",
+  "homepage": "https://chakra-demo-eight.vercel.app/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

@@ -5,7 +5,6 @@ import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/chakra-demo/',
   resolve: {
     alias: { '@': path.resolve(__dirname, './src') },
   },
